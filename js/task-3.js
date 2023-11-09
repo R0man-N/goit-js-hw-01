@@ -1,10 +1,10 @@
 function getElementWidth (content, padding, border) {
-    const contentWidth = parseInt(content);
-    const paddingWidth = parseInt(padding);
-    const borderWidth = parseInt(border);
+    const contentWidth = parseFloat(content);
+    const paddingWidth = parseFloat(padding);
+    const borderWidth = parseFloat(border);
 
-    // Обчислити загальну ширину елемента (включаючи padding та border)
-    const totalWidth = contentWidth + paddingWidth + borderWidth;
+    // Загальна ширина елемента
+    const totalWidth = contentWidth + (paddingWidth * 2) + (borderWidth * 2);
 
     return totalWidth;
 };
